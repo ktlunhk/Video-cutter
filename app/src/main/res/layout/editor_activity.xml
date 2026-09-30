@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/layout_player_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextureView
+                android:id="@+id/texture_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <green.mobileapps.clippervideocutter.CropOverlayView
+                android:id="@+id/crop_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_middle_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/button_prev_frame"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Seek to start"
+                android:src="@drawable/skip_previous_24px"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/button_play_pause"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Play"
+                android:src="@drawable/play_arrow_24px"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/button_crop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Toggle crop"
+                android:src="@drawable/crop_24px"
+                android:tint="@android:color/white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_action_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/button_cancel_action"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arrow_back_24px"
+                android:tint="#808080" />
+
+            <ImageButton
+                android:id="@+id/button_reset_trim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Reset trim range"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/replay_24px"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/button_save_check"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Export trimmed video"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/save_24px"
+                android:tint="@android:color/white" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/editor_time_labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/editor_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <include layout="@layout/editor_overlays" />
+
+</FrameLayout>
