@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Cutter</string>
-    <string name="msg_add_videos">Tap + to add videos</string>
-    <string name="cd_add_video">Add video</string>
-    <string name="cd_remove_video">Remove video</string>
-    <string name="cd_album_art">Album Art</string>
-    <string name="zeros_underlined">0:00.0</string>
-</resources>
