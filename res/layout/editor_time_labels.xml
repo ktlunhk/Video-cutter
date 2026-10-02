@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_time_labels"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/text_total_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:text="Total 0:00.0"
+        android:textColor="#808080"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/layout_start_nudge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_start_minus_frame"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Start minus one frame"
+                android:src="@drawable/fast_rewind_24px"
+                android:tint="#B0B0B0" />
+
+            <ImageButton
+                android:id="@+id/button_start_minus_tenth"
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Start minus 0.1s"
+                android:src="@drawable/remove_24px"
+                android:tint="#808080" />
+
+            <TextView
+                android:id="@+id/text_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/zeros_underlined"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_start_plus_tenth"
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Start plus 0.1s"
+                android:src="@drawable/add_24px"
+                android:tint="#808080" />
+
+            <ImageButton
+                android:id="@+id/button_start_plus_frame"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Start plus one frame"
+                android:src="@drawable/fast_forward_24px"
+                android:tint="#B0B0B0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_end_nudge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_end_minus_frame"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="End minus one frame"
+                android:src="@drawable/fast_rewind_24px"
+                android:tint="#B0B0B0" />
+
+            <ImageButton
+                android:id="@+id/button_end_minus_tenth"
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="End minus 0.1s"
+                android:src="@drawable/remove_24px"
+                android:tint="#808080" />
+
+            <TextView
+                android:id="@+id/text_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/zeros_underlined"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_end_plus_tenth"
+                android:layout_width="28dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="End plus 0.1s"
+                android:src="@drawable/add_24px"
+                android:tint="#808080" />
+
+            <ImageButton
+                android:id="@+id/button_end_plus_frame"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="End plus one frame"
+                android:src="@drawable/fast_forward_24px"
+                android:tint="#B0B0B0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
