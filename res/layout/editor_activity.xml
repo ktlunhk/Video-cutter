@@ -41,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center" />
 
-            <green.mobileapps.clippervideocutter.CropOverlayView
+            <com.videocutter.CropOverlayView
                 android:id="@+id/crop_overlay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
